@@ -11,8 +11,16 @@ Technology stack (Java, Spring, Hibernate, JSoup, dan MySql)
 
 # Menjalankan aplikasi sample
 1. Untuk menjalankan aplikasi sample anda harus menggunakan build tools apache maven.
+2. Untuk menggunakan modul kbbi pastikan koneksi internet anda, karena diperlukan untuk crawling web http://kbbi.web.id
 2. Melalui command prompt / terminal masuk ke directory modul stemmer-rest-ws dan lakukan command mvn clean install dan mvn jetty:run jika menggunakan jetty container.
 3. Jika ingin di deploy di tomcat maka sama seperti step nomor 2 namun dengan command berbeda yaitu mvn clean install saja. maka akan ada file war di directory target.
+
+# Contoh hasil
+1. Algoritma Nazief dan Adriani
+![alt text](https://raw.githubusercontent.com/mimsapp/stemmer-bahasa/master/src/site/algorithm.JPG)
+
+1. KBBI Crawler
+![alt text](https://raw.githubusercontent.com/mimsapp/stemmer-bahasa/master/src/site/kbbi.JPG)
 
 # Informasi lebih lanjut
 email ke mimsapp@gmail.com
