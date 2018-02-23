@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.mimsapp.stemmer.sample.util.JsonMapperUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,7 +21,9 @@ public class StemmerSampleController {
 	@Autowired
 	private StemmerService service;
 	
-	@RequestMapping(value = "/word/info/kbbi", method = RequestMethod.GET)
+	@RequestMapping(value = "/word/info/kbbi",
+			produces = MediaType.APPLICATION_JSON_VALUE,
+			method = RequestMethod.GET)
 	public @ResponseBody String getKbbiWordInfo(
 			@RequestParam("word") String word) {
 
@@ -29,7 +32,8 @@ public class StemmerSampleController {
 		return JsonMapperUtil.convertToJson(kbbiWordInfos);
 	}
 	
-	@RequestMapping(value = "/word/info/algorithm", method = RequestMethod.GET)
+	@RequestMapping(value = "/word/info/algorithm", produces = MediaType.APPLICATION_JSON_VALUE,
+			method = RequestMethod.GET)
 	public @ResponseBody String getAlgorithmWordInfo(
 			@RequestParam("word") String word) {
 
