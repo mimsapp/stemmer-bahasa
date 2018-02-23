@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="com.mimsapp.stemmer.engine.domain.KbbiWordInfo" table="KBBI_WORD_INFO">
+    	<id name="id" type="int" column="ID">
+			<generator class="native" />
+		</id>
+        <property name="word" column="WORD" type="string" />
+        <property name="wordId" column="WORD_ID" type="int" />
+        <property name="separatedWord" column="SEPARATED_WORD" type="string" />
+        <property name="wordType" column="WORD_TYPE" type="string" />
+        <property name="rootWord" column="ROOT_WORD" type="string" />
+        <property name="prefixes" column="PREFIXES" type="string" />
+        <property name="suffixes" column="SUFFIXES" type="string" />
+    </class>
+</hibernate-mapping>

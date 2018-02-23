@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.mimsapp.stemmer.engine.domain.RootWord" table="ROOT_WORD">
+		<id name="id" type="int" column="ID">
+			<generator class="native" />
+		</id>
+		<property name="word" column="WORD" type="string" />
+		<property name="wordType" column="WORD_TYPE" type="string" />
+	</class>
+</hibernate-mapping>

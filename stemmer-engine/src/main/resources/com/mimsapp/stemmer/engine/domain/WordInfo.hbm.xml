@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+ "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="com.mimsapp.stemmer.engine.domain.WordInfo" table="WORD_INFO">
+        <id name="word" type="string" column="WORD" />
+        <property name="rootWord" column="ROOT_WORD" type="string" />
+        <property name="prefixes" column="PREFIXES" type="string" />
+        <property name="suffixes" column="SUFFIXES" type="string" />
+    </class>
+</hibernate-mapping>
